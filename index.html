@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume • นายยศกร กล้าหาญ</title>
+    <meta name="description"
+        content="Student Resume — Responsive Bootstrap, single-page with sections and smooth scrolling." />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --accent: #0d6efd;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8fafc;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+        }
+
+        header.hero {
+            background: linear-gradient(180deg, #e9f2ff, #fff);
+        }
+
+        .section-title {
+            font-weight: 700;
+            letter-spacing: .2px
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: .5;
+        }
+
+        .badge-skill {
+            font-size: .9rem;
+            padding: .55rem .8rem
+        }
+
+        .timeline {
+            border-left: 3px solid #e9ecef;
+            padding-left: 1rem
+        }
+
+        .timeline .item {
+            position: relative;
+            margin-bottom: 1.2rem
+        }
+
+        .timeline .item::before {
+            content: "";
+            position: absolute;
+            left: -1.19rem;
+            top: .35rem;
+            width: .75rem;
+            height: .75rem;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #e9f2ff
+        }
+
+        /* Scrollspy active link */
+        .nav-link.active {
+            font-weight: 700;
+        }
+
+        footer {
+            color: #6c757d
+        }
+
+        /* ปรับระยะ anchor ให้ไม่โดน navbar ทับ */
+        section {
+            scroll-margin-top: 80px
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="90" tabindex="0">
+    <!-- Navbar -->
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Resume</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Employment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header -->
+    <header id="home" class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-auto text-center text-md-start">
+                    <!-- เปลี่ยน src เป็นรูปตนเองขนาดสี่เหลี่ยม (ระบบจะตัดเป็นวงกลม) -->
+                    <img class="avatar" src="รูปประจำตัว.png" alt="Profile" />
+                </div>
+                <div class="col">
+                    <h1 class="display-5 mb-1">นายยศกร กล้าหาญ</h1>
+                    <p class="mb-1"><em>สาขาวิชาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์</em></p>
+                    <p class="mb-1">คณะวิศวกรรมศาสตร์และเทคโนโลยี</p>
+                    <p class="mb-0">สถาบัน: <a href="http://pim.ac.th" target="_blank" rel="noopener"
+                            class="link-primary">Panyapiwat Institute of Management (PIM)</a></p>
+                </div>
+            </div>
+            <hr class="my-4" />
+            <p class="lead mb-0">นักศึกษาที่สนใจด้าน <strong>Network Engineering</strong> และ <strong>Web
+                    Development</strong>
+                มุ่งพัฒนาทักษะด้าน <strong>Routing & Switching, VLAN/ACL/NAT</strong> </p>
+        </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="divider mb-4"></div>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-7">
+                    <p>สวัสดีครับ ผมชื่อ นายยศกร กล้าหาญ
+                        เป็นนักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์จากสถาบันการจัดการปัญญาภิวัฒน์ (PIM)
+                        ที่หลงใหลในการทำงานด้าน Network Engineering และการพัฒนาเว็บไซต์
+
+                        ผมเป็นคนชอบเรียนรู้สิ่งใหม่ ๆ โดยเฉพาะเทคโนโลยีที่เกี่ยวกับระบบเครือข่าย ความปลอดภัยไซเบอร์
+                        และการเขียนโปรแกรม ผมเชื่อว่าการลงมือทำจริงคือวิธีที่ดีที่สุดในการเติบโต
+
+                        ปัจจุบันกำลังพัฒนาทักษะในด้าน Cisco Networking, Web Application Development และ Cybersecurity
+                        เพื่อเตรียมพร้อมสำหรับการฝึกงานและก้าวต่อไปในสายอาชีพ IT Infrastructure</p>
+
+                </div>
+                <div class="col-md-5">
+                    <ul class="list-group list-group-flush shadow-sm rounded">
+                        <li class="list-group-item d-flex justify-content-between"><span>ภาษาไทย</span><span
+                                class="badge text-bg-primary">Native</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>English</span><span
+                                class="badge text-bg-primary">Intermediate</span></li>
+                        <li class="list-group-item d-flex justify-content-between"><span>ความสนใจ</span><span
+                                class="text-muted">Web • Network • Security</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="divider mb-4"></div>
+            <div class="timeline">
+                <div class="item">
+                    <h5 class="mb-1">ปริญญาตรี — สาขาสาขาวิชาวิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์,
+                        คณะวิศวกรรมศาสตร์และเทคโนโลยี</h5>
+                    <div class="text-muted">Panyapiwat Institute of Management (PIM) • 2024 – ปัจจุบัน</div>
+                    <ul class="mt-2 mb-0">
+                        <li>รายวิชาที่เกี่ยวข้อง: OOP, Database, Networking</li>
+
+                    </ul>
+                </div>
+                <div class="item">
+                    <h5 class="mb-1">ประกาศนียบัตรวิชาชีพ (ปวช.) — สาขาคอมพิวเตอร์ธุรกิจ</h5>
+                    <div class="text-muted">วิทยาลัยการอาชีพขอนแก่น • 2021 – 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employment History -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Employment History</h2>
+            <div class="divider mb-4"></div>
+            <div class="row g-4">
+                <div class="col-md-6">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                    <h5 class="mb-1">Part-time — ร้าน 7-Eleven</h5>
+                    <div class="text-muted">03/2025 – 05/2025 • นนทบุรี</div>
+                    <p class="mt-2 mb-0">ฝึกงานในตำแหน่งพนักงานร้าน 7-Eleven เรียนรู้ระบบการจัดการร้านค้า
+                        การให้บริการลูกค้า และการใช้เทคโนโลยีในกระบวนการขายและสต็อกสินค้า</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="divider mb-4"></div>
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge rounded-pill text-bg-primary badge-skill">HTML</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">CSS</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">Bootstrap</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">JavaScript</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">SQL</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">Cisco Packet Tracer</span>
+                        <span class="badge rounded-pill text-bg-primary badge-skill">Git/GitHub</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <!-- ตัวอย่างแถบความชำนาญ -->
+                    <div class="mb-2">Front‑end</div>
+                    <div class="progress" role="progressbar" aria-label="Frontend level" aria-valuenow="40"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 40%">40%</div>
+                    </div>
+                    <div class="mt-3 mb-2">Networking</div>
+                    <div class="progress" role="progressbar" aria-label="Networking level" aria-valuenow="40"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 40%">40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Other -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Project</h2>
+            <div class="divider mb-4"></div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Order & Pick‑up Locker</h5>
+                            <p class="card-text">ออกแบบเว็บ/แอปและโครงสร้างเครือข่ายสำหรับระบบล็อกเกอร์อัตโนมัติใน
+                                7‑Eleven (Demo / Mock‑up)</p>
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="divider mb-4"></div>
+            <p class="text-muted">ติดต่อฉันได้ผ่านช่องทางต่อไปนี้ :</p>
+            <ol>
+                <li class="mb-2">
+                    อีเมลสถาบัน:
+                    <!-- ใช้ภาพแทน @ เพื่อกันสแปม -->
+                    <span class="user">student</span>
+                    <img alt="@" style="height:1em; vertical-align:baseline; margin:0 .15rem"
+                        src='data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="%230d6efd"/><text x="12" y="16" font-size="14" text-anchor="middle" fill="white">@</text></svg>' />
+                    <span class="domain">pim.ac.th</span>
+
+                </li>
+                <li class="mb-2">เบอร์โทร: 09x‑xxx‑xxxx </li>
+                <li class="mb-2">ที่อยู่: คลองเกลือ ปากเกร็ด นนทบุรี </li>
+                <li class="mb-2">GitHub: <a href="https://github.com/Draco-afk" target="_blank">github.com/Draco-afk</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container small d-flex flex-wrap gap-2 justify-content-between">
+            <span>© <span id="year"></span> นายยศกร กล้าหาญ</span>
+            <span class="text-muted">Single‑page resume • Bootstrap 5</span>
+            <a class="small" href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ปีปัจจุบันใน footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ทำลิงก์อีเมลแบบ obfuscate (ประกอบจาก user + domain)
+        const emailUser = document.querySelector('#contact .user').textContent.trim();
+        const emailDomain = document.querySelector('#contact .domain').textContent.trim();
+        const emailFull = emailUser + '@' + emailDomain;
+        const small = document.querySelector('#contact small');
+        if (small) {
+            const a = document.createElement('a');
+            a.href = 'mailto:' + emailFull;
+            a.textContent = ' (mailto)';
+            a.className = 'ms-1';
+            small.replaceWith(a);
+        }
+    </script>
+</body>
+
+</html>
